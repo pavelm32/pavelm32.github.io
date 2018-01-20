@@ -1,0 +1,48 @@
+.webest {
+    background: url('../img/bg/webest_bg.png') 50% 50% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.webest__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    padding-bottom: 15%;
+}
+
+.webest__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.webest__list {
+    display: flex;
+    align-items: baseline;
+}
+
+.webest__list-item {
+    margin-right: 40px;
+    flex:3;
+    text-align: center;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.webest__list-subtitle {
+    color: #000000;
+    font-family: 'Lifehack';
+    font-size: 24px;
+}
+
+.webest__list-text {
+    color: #2f3234;
+    opacity: 0.8;
+    font-weight: 300;
+    line-height: 1.8;
+}
