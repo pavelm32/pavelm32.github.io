@@ -38,6 +38,7 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: baseline;
+
 }
 
 .reviews__text-hidden {
@@ -57,12 +58,14 @@
     color:#ffffff;
     font-family: 'Gagalin';
     margin: 30px 0;
+    opacity: 1;
 }
 
 .reviews__reviewer-text {
     color:#ffffff;
     font-weight: 300;
     line-height: 1.8;
+    opacity: 1;
 }
 
 .reviews__more-btn{
@@ -72,8 +75,10 @@
     display: block;
     text-transform: uppercase;
     border-radius: 4px;
+    opacity: 1;
 
     &:hover{
         background-color: #1f2122;
+        opacity: 1;
     }
 }
