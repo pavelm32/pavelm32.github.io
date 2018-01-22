@@ -4,28 +4,22 @@
     position: relative;
 }
 
-.webest__content {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    align-items: center;
-    padding-bottom: 15%;
-}
-
-.webest__description {
-    display: flex;
-    flex-direction: column;
+.webest__container{
+    justify-content: center;
     align-items: center;
 }
 
-.webest__list {
+.section__title_black {
+    color: #2f3234;
+}
+
+.webest-list {
     display: flex;
     align-items: baseline;
     margin-top:25px;
 }
 
-.webest__list-item {
+.webest-list__item {
     margin-right: 40px;
     flex:3;
     text-align: center;
@@ -35,14 +29,15 @@
     }
 }
 
-.webest__list-subtitle {
+.webest-list__subtitle {
     color: #000000;
     font-family: 'Lifehack';
+    font-weight: 400;
     font-size: 24px;
     margin-top: 30px;
 }
 
-.webest__list-text {
+.webest-list__text {
     color: #2f3234;
     opacity: 0.8;
     font-weight: 300;
