@@ -55,7 +55,9 @@
                         </h2>
                         <ul class="webest-list">
                             <li class="webest-list__item">
-                                <img src="img/content/meat.svg" alt="icon" class="webest-list_icon">
+                                <svg class="webest-list__icon webest-list__icon_view_meat">
+                                    <use xlink:href="img/icons/sprite.svg#meat"></use>
+                                </svg>
                                 <h3 class="webest-list__subtitle">100% свежее мясо</h3>
                                 <p class="webest-list__text">
                                     Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
@@ -63,7 +65,9 @@
                                 </p>
                             </li>
                             <li class="webest-list__item">
-                                <img src="img/content/hand.svg" alt="icon" class="webest-list__icon">
+                                <svg class="webest-list__icon webest-list__icon_view_hand">
+                                    <use xlink:href="img/icons/sprite.svg#hand"></use>
+                                </svg>
                                 <h3 class="webest-list__subtitle">Ручная сборка</h3>
                                 <p class="webest-list__text">
                                     Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие
@@ -71,7 +75,9 @@
                                 </p>
                             </li>
                             <li class="webest-list__item">
-                                <img src="img/content/natural.svg" alt="icon" class="webest-list__icon">
+                                <svg class="webest-list__icon webest-list__icon_view_natural">
+                                    <use xlink:href="img/icons/sprite.svg#natural"></use>
+                                </svg>
                                 <h3 class="webest-list__subtitle">Натуральные ингредиенты</h3>
                                 <p class="webest-list__text">
                                     Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
@@ -82,71 +88,123 @@
                 </section>
                 <section class="section team">
                     <div class="container team__container">
-                        <h2 class="section__title">
-                            Команда
-                        </h2>
-                        <ul class="team-list">
-                            <li class="team-list__item">
-                                <a href="#" class="team-list__name">Дэниэл Редклиф</a>
-                                <div class="team-list__operator">
-                                    <div class="team-list__operator-avatar">
-                                        <img src="./img/content/avatar.jpg" alt="" class="team-list__operator-img">
+                        <div class="team__content">
+                            <h2 class="section__title">
+                                Команда
+                            </h2>
+                            <ul class="team-list">
+                                <li class="team-list__item">
+                                    <a href="#" class="team-list__name">Дэниэл Редклиф</a>
+                                    <div class="team-list__operator">
+                                        <div class="team-list__operator-avatar">
+                                            <img src="./img/content/avatar.jpg" alt="" class="team-list__operator-img">
+                                        </div>
+                                        <div class="team-list__operator-description">
+                                            <p>
+                                                <span class="team-list__operator-position">Оператор</span><br>
+                                                С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="team-list__operator-description">
-                                        <p>
-                                            <span class="team-list__operator-position">Оператор</span><br>
-                                            С радостью поможет подобрать идеальный бургер и оформить заказ.
-                                        </p>
+                                </li>
+                                <li class="team-list__item team-list__item_opened">
+                                    <a href="#" class="team-list__name">Ричард Джеймс</a>
+                                    <div class="team-list__operator">
+                                        <div class="team-list__operator-avatar">
+                                            <img src="./img/content/avatar.jpg" alt="" class="team-list__operator-img">
+                                        </div>
+                                        <div class="team-list__operator-description">
+                                            <p>
+                                                <span class="team-list__operator-position">Оператор</span><br>
+                                                С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="team-list__item team-list__item_opened">
-                                <a href="#" class="team-list__name">Ричард Джеймс</a>
-                                <div class="team-list__operator">
-                                    <div class="team-list__operator-avatar">
-                                        <img src="./img/content/avatar.jpg" alt="" class="team-list__operator-img">
+                                </li>
+                                <li class="team-list__item">
+                                    <a href="#" class="team-list__name">Джейк Финн</a>
+                                    <div class="team-list__operator">
+                                        <div class="team-list__operator-avatar">
+                                            <img src="./img/content/avatar.jpg" alt="" class="team-list__operator-img">
+                                        </div>
+                                        <div class="team-list__operator-description">
+                                            <p>
+                                                <span class="team-list__operator-position">Оператор</span><br>
+                                                С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="team-list__operator-description">
-                                        <p>
-                                            <span class="team-list__operator-position">Оператор</span><br>
-                                            С радостью поможет подобрать идеальный бургер и оформить заказ.
-                                        </p>
+                                </li>
+                                <li class="team-list__item">
+                                    <a href="#" class="team-list__name">Николай Иванов</a>
+                                    <div class="team-list__operator">
+                                        <div class="team-list__operator-avatar">
+                                            <img src="./img/content/avatar.jpg" alt="" class="team-list__operator-img">
+                                        </div>
+                                        <div class="team-list__operator-description">
+                                            <p>
+                                                <span class="team-list__operator-position">Оператор</span><br>
+                                                С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="team-list__item">
-                                <a href="#" class="team-list__name">Джейк Финн</a>
-                                <div class="team-list__operator">
-                                    <div class="team-list__operator-avatar">
-                                        <img src="./img/content/avatar.jpg" alt="" class="team-list__operator-img">
-                                    </div>
-                                    <div class="team-list__operator-description">
-                                        <p>
-                                            <span class="team-list__operator-position">Оператор</span><br>
-                                            С радостью поможет подобрать идеальный бургер и оформить заказ.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="team-list__item">
-                                <a href="#" class="team-list__name">Николай Иванов</a>
-                                <div class="team-list__operator">
-                                    <div class="team-list__operator-avatar">
-                                        <img src="./img/content/avatar.jpg" alt="" class="team-list__operator-img">
-                                    </div>
-                                    <div class="team-list__operator-description">
-                                        <p>
-                                            <span class="team-list__operator-position">Оператор</span><br>
-                                            С радостью поможет подобрать идеальный бургер и оформить заказ.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 <section class="section menu">
-                    <div class="container menu__container"></div>
+                    <div class="container menu__container">
+                        <!--div class="menu__content"-->
+                            <h2 class="section__title section__title_white">
+                                Меню
+                            </h2>
+                            <ul class="menu-list">
+                                <li class="menu-list__item menu-list__item_bg_meat">
+                                    <a href="#" class="menu-list__title">Для мясоедов</a>
+                                    <div class="menu-list__description">
+                                        <p>
+                                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                                            еханизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
+                                            относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает
+                                            И.Гальперин, пространственно выбирает метр.
+                                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                                            механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
+                                            относиться к слову.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="menu-list__item menu-list__item_bg_veg">
+                                    <a href="#" class="menu-list__title">Вегетарианское</a>
+                                    <div class="menu-list__description">
+                                        <p>
+                                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                                            еханизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
+                                            относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает
+                                            И.Гальперин, пространственно выбирает метр.
+                                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                                            механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
+                                            относиться к слову.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="menu-list__item menu-list__item_bg_diet">
+                                    <a href="#" class="menu-list__title ">Диетическое</a>
+                                    <div class="menu-list__description">
+                                        <p>
+                                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                                            еханизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
+                                            относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает
+                                            И.Гальперин, пространственно выбирает метр.
+                                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                                            механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
+                                            относиться к слову.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        <!--/div-->
+                    </div>
                 </section>
                 <section class="section reviews">
                     <div class="container reviews__container">

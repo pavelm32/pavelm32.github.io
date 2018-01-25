@@ -64,6 +64,14 @@ a {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal; }
+
 .wrapper {
   width: 100%;
   height: 100%; }
@@ -107,7 +115,6 @@ a {
 .section__title {
   color: #f9b43b;
   font-family: 'Gagalin';
-  font-weight: 400;
   font-size: 72px;
   line-height: 1.42;
   margin: 0;
@@ -274,10 +281,19 @@ a {
   .webest-list__item:last-child {
     margin-right: 0; }
 
+.webest-list__icon {
+  width: 97px;
+  height: 90px; }
+  .webest-list__icon_view_meat {
+    fill: #e25028; }
+  .webest-list__icon_view_hand {
+    fill: #f8b43a; }
+  .webest-list__icon_view_natural {
+    fill: #8ac03e; }
+
 .webest-list__subtitle {
   color: #000000;
   font-family: 'Lifehack';
-  font-weight: 400;
   font-size: 24px;
   margin-top: 30px; }
 
@@ -290,16 +306,23 @@ a {
 .team {
   background: url("../img/bg/team_bg.jpg") 50% 50% no-repeat;
   background-size: cover;
-  position: relative;
-  display: flex;
-  justify-content: flex-end; }
+  position: relative; }
 
 .team__container {
-  flex-basis: 26%;
+  width: 49%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  /*justify-content: center;*/
-  padding: 90px 155px 0 155px; }
+  background-color: rgba(47, 50, 52, 0.93);
+  display: flex;
+  align-items: center; }
+
+.team__content {
+  padding-top: 60px;
+  padding-left: 140px;
+  padding-right: 35px; }
 
 .team-list {
   margin-top: 40px; }
@@ -307,13 +330,10 @@ a {
 .team-list__item {
   margin-bottom: 30px; }
   .team-list__item:hover .team-list__name {
-    color: #f9b43b; }
+    color: #f9b43b;
+    align-items: flex-start; }
     .team-list__item:hover .team-list__name:before {
-      /*border-top-color: transparent;
-      border-bottom-color: #f9b43b;
-      vertical-align: top;*/
-      transform: rotate(180deg);
-      vertical-align: middle; }
+      transform: rotate(-180deg); }
   .team-list__item:hover .team-list__operator {
     height: auto;
     margin-top: 15px; }
@@ -321,36 +341,31 @@ a {
     margin-bottom: 0; }
 
 .team-list__item_opened .team-list__name {
-  color: #f9b43b; }
+  color: #f9b43b;
+  align-items: flex-start; }
   .team-list__item_opened .team-list__name:before {
-    /*border-top-color: transparent;
-    border-bottom-color: #f9b43b;
-    vertical-align: top;*/
-    transform: rotate(180deg);
-    vertical-align: middle; }
+    transform: rotate(-180deg); }
 .team-list__item_opened .team-list__operator {
   height: auto;
   margin-top: 15px; }
 
 .team-list__name {
-  display: inline-block;
   font-family: 'Gagalin';
   font-weight: 400;
   color: #ffffff;
-  vertical-align: middle;
+  display: flex;
+  align-items: flex-end;
   transition: all .5s; }
   .team-list__name:before {
     content: '';
-    display: inline-block;
     width: 0;
     height: 0;
     border: 6px solid transparent;
     border-right-width: 4px;
     border-left-width: 4px;
     border-top-color: #f9b43b;
-    vertical-align: bottom;
     margin-right: 10px;
-    /*transition: all .5s;*/ }
+    transition: all .5s; }
 
 .team-list__operator {
   height: 0;
@@ -381,6 +396,63 @@ a {
 
 .team-list__operator-position {
   font-weight: 700; }
+
+.menu {
+  background: url("../img/bg/menu_bg.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.menu__container {
+  margin: 0;
+  flex-direction: row; }
+
+.menu__content {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+
+.section__title_white {
+  color: #ffffff;
+  margin-left: 80px;
+  margin-right: auto; }
+
+.menu-list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex; }
+
+.menu-list__item {
+  display: flex;
+  align-items: flex-end;
+  background-color: rgba(47, 50, 52, 0.93);
+  justify-content: center;
+  width: 80px; }
+  .menu-list__item_bg_meat {
+    background: url("../img/content/meat_bg.jpg") 50% 50% no-repeat;
+    background-size: cover; }
+  .menu-list__item_bg_veg {
+    background: url("../img/content/veg_bg.jpg") 50% 50% no-repeat;
+    background-size: cover; }
+  .menu-list__item_bg_diet {
+    background: url("../img/content/diet_bg.jpg") 50% 50% no-repeat;
+    background-size: cover; }
+
+.menu-list__title {
+  font-family: "Gagalin";
+  font-weight: 400;
+  font-size: 40px;
+  color: #ffffff;
+  display: block;
+  transform: rotate(-90deg) translateX(50%);
+  white-space: nowrap; }
+
+.menu-list__description {
+  width: 0;
+  height: 0;
+  transition: all .5s;
+  overflow: hidden; }
 
 .reviews__container {
   width: auto; }
@@ -428,8 +500,7 @@ a {
 .reviews-list__reviewer-name {
   color: #ffffff;
   font-family: 'Gagalin';
-  font-weight: 400;
-  margin: 30px 0;
+  margin: 20px 0 5px 0;
   opacity: 1; }
 
 .reviews-list__reviewer-text {

@@ -29,10 +29,28 @@
     }
 }
 
+.webest-list__icon{
+    width: 97px;
+    height: 90px;
+    &_view_meat{
+
+        fill: #e25028;
+    }
+
+    &_view_hand{
+
+        fill: #f8b43a;
+    }
+
+    &_view_natural{
+
+        fill: #8ac03e;
+    }
+}
+
 .webest-list__subtitle {
     color: #000000;
     font-family: 'Lifehack';
-    font-weight: 400;
     font-size: 24px;
     margin-top: 30px;
 }

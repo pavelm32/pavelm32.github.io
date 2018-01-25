@@ -1,0 +1,74 @@
+.menu {
+    background: url('../img/bg/menu_bg.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.menu__container{
+    margin: 0;
+    flex-direction: row;
+}
+
+.menu__content{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+
+.section__title_white{
+    color:#ffffff;
+    margin-left: 80px;
+    margin-right: auto;
+}
+
+
+.menu-list{
+    position: absolute;
+    right: 0;
+    top:0;
+    bottom: 0;
+    display: flex;
+}
+
+.menu-list__item{
+    display: flex;
+    align-items: flex-end;
+    background-color: rgba(#2f3234, 0.93);
+    justify-content: center;
+    width: 80px;
+
+    &_bg_meat{
+        background: url('../img/content/meat_bg.jpg') 50% 50% no-repeat;
+        background-size: cover;
+    }
+
+    &_bg_veg{
+        background: url('../img/content/veg_bg.jpg') 50% 50% no-repeat;
+        background-size: cover;
+    }
+
+    &_bg_diet{
+        background: url('../img/content/diet_bg.jpg') 50% 50% no-repeat;
+        background-size: cover;
+    }
+}
+
+
+.menu-list__title{
+    font-family: "Gagalin";
+    font-weight: 400;
+    font-size: 40px;
+    color: #ffffff;
+    display: block;
+    transform: rotate(-90deg) translateX(50%);
+    white-space: nowrap;
+}
+
+
+.menu-list__description{
+    width: 0;
+    height: 0;
+    transition: all .5s;
+    overflow: hidden;
+}
