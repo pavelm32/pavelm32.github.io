@@ -36,6 +36,7 @@
     align-items: flex-end;
     background-color: rgba(#2f3234, 0.93);
     justify-content: center;
+    position: relative;
     width: 80px;
 
     &_bg_meat{
@@ -51,6 +52,17 @@
     &_bg_diet{
         background: url('../img/content/diet_bg.jpg') 50% 50% no-repeat;
         background-size: cover;
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        width: 80px;
+        background-color: rgba(#141414, .7);
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
     }
 }
 
