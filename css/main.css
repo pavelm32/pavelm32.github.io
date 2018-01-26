@@ -28,6 +28,20 @@
   src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
+/*!
+ * Font Awesome Free 5.0.4 by @fontawesome - http://fontawesome.com
+ * License - http://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/fa-regular-400.eot");
+  src: url("../fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.woff") format("woff"), url("../fonts/fa-regular-400.ttf") format("truetype"), url("../fonts/fa-regular-400.svg#fontawesome") format("svg"); }
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400; }
+
 body {
   margin: 0;
   padding: 0;
@@ -94,8 +108,6 @@ h6 {
   background-color: rgba(0, 0, 0, 0.31);
   min-width: 940px;
   min-height: 650px; }
-  .section:last-child {
-    height: auto; }
 
 .order-link {
   min-width: 98px;
@@ -426,28 +438,36 @@ h6 {
 .menu-list__item {
   display: flex;
   align-items: flex-end;
-  background-color: rgba(47, 50, 52, 0.93);
+  background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
-  position: relative;
-  width: 80px; }
-  .menu-list__item_bg_meat {
-    background: url("../img/content/meat_bg.jpg") 50% 50% no-repeat;
-    background-size: cover; }
-  .menu-list__item_bg_veg {
-    background: url("../img/content/veg_bg.jpg") 50% 50% no-repeat;
-    background-size: cover; }
-  .menu-list__item_bg_diet {
-    background: url("../img/content/diet_bg.jpg") 50% 50% no-repeat;
-    background-size: cover; }
-  .menu-list__item:before {
-    content: '';
-    position: absolute;
-    width: 80px;
-    background-color: rgba(20, 20, 20, 0.7);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; }
+  position: relative; }
+
+.menu-list__title-wrap:before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+.menu-list__title-wrap:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+.menu-list__title-wrap_bg_meat:before {
+  background: url("../img/content/meat_bg.jpg") 50% 50% no-repeat;
+  background-size: cover; }
+.menu-list__title-wrap_bg_veg:before {
+  background: url("../img/content/veg_bg.jpg") 50% 50% no-repeat;
+  background-size: cover; }
+.menu-list__title-wrap_bg_diet:before {
+  background: url("../img/content/diet_bg.jpg") 50% 50% no-repeat;
+  background-size: cover; }
 
 .menu-list__title {
   font-family: "Gagalin";
@@ -462,7 +482,12 @@ h6 {
   width: 0;
   height: 0;
   transition: all .5s;
+  font-weight: 300;
+  color: #ffffff;
   overflow: hidden; }
+
+.reviews {
+  height: auto; }
 
 .reviews__container {
   width: auto; }
@@ -530,3 +555,104 @@ h6 {
   .reviews-list__more-btn:hover {
     background-color: #1f2122;
     opacity: 1; }
+
+.form {
+  background: url("../img/bg/form_bg.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.form__container {
+  align-items: center; }
+
+.form__content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px; }
+
+.form__column {
+  flex: 1;
+  margin-right: 20px; }
+  .form__column:last-child {
+    margin-right: 0; }
+
+.form__row {
+  display: flex;
+  margin-bottom: 20px; }
+
+.form__fieldset {
+  margin-right: 20px; }
+
+.form__fieldset-title, .form__fieldset-title-radio, .form__fieldset-title-checkbox {
+  font-weight: 300;
+  color: #ffffff; }
+
+.form__fieldset-input {
+  border: 1px solid #d1cfcb;
+  border-radius: 4px;
+  line-height: 30px;
+  padding-left: 20px;
+  color: #2f3234;
+  font-weight: 300; }
+  .form__fieldset-input:focus {
+    border: 2px solid #f9b43b; }
+
+.form__fieldset-textarea {
+  resize: none;
+  border-radius: 4px; }
+
+.form__fieldset-radio {
+  display: none; }
+  .form__fieldset-radio:checked + .form__fieldset-title-radio:after {
+    display: block; }
+
+.form__fieldset-title-radio {
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .form__fieldset-title-radio:before {
+    content: '';
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 50%;
+    margin-right: 10px; }
+  .form__fieldset-title-radio:after {
+    content: ' ';
+    display: none;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #e35028;
+    border-radius: 50%;
+    top: 6px;
+    left: 4px; }
+
+.form__fieldset-checkbox {
+  display: none; }
+  .form__fieldset-checkbox:checked + .form__fieldset-title-checkbox:after {
+    display: block; }
+
+.form__fieldset-title-checkbox {
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .form__fieldset-title-checkbox:before {
+    content: '';
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 0;
+    margin-right: 10px; }
+  .form__fieldset-title-checkbox:after {
+    content: "\f00c";
+    display: none;
+    position: absolute;
+    color: #e35028;
+    top: 6px;
+    left: 4px; }

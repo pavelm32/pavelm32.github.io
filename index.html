@@ -161,7 +161,9 @@
                             </h2>
                             <ul class="menu-list">
                                 <li class="menu-list__item menu-list__item_bg_meat">
-                                    <a href="#" class="menu-list__title">Для мясоедов</a>
+                                    <div class="menu-list__title-wrap menu-list__title-wrap_bg_meat">
+                                        <a href="#" class="menu-list__title">Для мясоедов</a>
+                                    </div>
                                     <div class="menu-list__description">
                                         <p>
                                             Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
@@ -175,7 +177,9 @@
                                     </div>
                                 </li>
                                 <li class="menu-list__item menu-list__item_bg_veg">
-                                    <a href="#" class="menu-list__title">Вегетарианское</a>
+                                    <div class="menu-list__title-wrap menu-list__title-wrap_bg_veg">
+                                        <a href="#" class="menu-list__title">Вегетарианское</a>
+                                    </div>
                                     <div class="menu-list__description">
                                         <p>
                                             Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
@@ -189,7 +193,9 @@
                                     </div>
                                 </li>
                                 <li class="menu-list__item menu-list__item_bg_diet">
-                                    <a href="#" class="menu-list__title ">Диетическое</a>
+                                    <div class="menu-list__title-wrap menu-list__title-wrap_bg_diet">
+                                        <a href="#" class="menu-list__title ">Диетическое</a>
+                                    </div>
                                     <div class="menu-list__description">
                                         <p>
                                             Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
@@ -340,13 +346,84 @@
                         </ul>
                     </div>
                 </section>
+                <section class="section form">
+                    <div class="container form__container">
+                        <h2 class="section__title">
+                            Закажите доставку
+                        </h2>
+                        <div class="form__content">
+                            <div class="form__column">
+                                <div class="form__row">
+                                    <label class="form__fieldset">
+                                        <div class="form__fieldset-title">Имя</div>
+                                        <input type="text" class="form__fieldset-input">
+                                    </label>
+                                    <label class="form__fieldset">
+                                        <div class="form__fieldset-title">Телефон</div>
+                                        <input type="text" class="form__fieldset-input">
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <label class="form__fieldset">
+                                        <div class="form__fieldset-title">Улица</div>
+                                        <input type="text" class="form__fieldset-input">
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <label class="form__fieldset">
+                                        <div class="form__fieldset-title">Дом</div>
+                                        <input type="text" class="form__fieldset-input">
+                                    </label>
+                                    <label class="form__fieldset">
+                                        <div class="form__fieldset-title">Корпус</div>
+                                        <input type="text" class="form__fieldset-input">
+                                    </label>
+                                    <label class="form__fieldset">
+                                        <div class="form__fieldset-title">Квартира</div>
+                                        <input type="text" class="form__fieldset-input">
+                                    </label>
+                                    <label class="form__fieldset">
+                                        <div class="form__fieldset-title">Этаж</div>
+                                        <input type="text" class="form__fieldset-input">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__row">
+                                    <label class="form__fieldset">
+                                        <div class="form__fieldset-title">Комментарий</div>
+                                        <textarea class="form__fieldset-textarea"></textarea>
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <label for="cash"  class="form__fieldset">
+                                        <input type="radio" name="type_pay" id="cash" class="form__fieldset-radio" checked="">
+                                        <div class="form__fieldset-title-radio">Потребуется сдача</div>
+                                    </label>
+                                    <label for="cards"  class="form__fieldset">
+                                        <input type="radio" name="type_pay" id="cards" class="form__fieldset-radio" checked="">
+                                        <div class="form__fieldset-title-radio">Оплата по карте</div>
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <label for="recall"  class="form__fieldset">
+                                        <input type="checkbox" name="type_pay" id="recall" class="form__fieldset-checkbox" checked="checked">
+                                        <div class="form__fieldset-title-checkbox">Не перезванивать</div>
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <a href="#" class="order-link">Заказать</a>
+                                    <a href="#" class="cancel-link">Очистить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <!--section class="section">
                     <div class="container"></div>
                 </section>
-                <section class="section">
-                    <div class="container"></div>
-                </section>
+
                 <section class="section">
                     <div class="container"></div>
                 </section-->

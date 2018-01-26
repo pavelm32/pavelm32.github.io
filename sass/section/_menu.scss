@@ -34,38 +34,60 @@
 .menu-list__item{
     display: flex;
     align-items: flex-end;
-    background-color: rgba(#2f3234, 0.93);
+    background-color: rgba(#000000, .7);
     justify-content: center;
     position: relative;
-    width: 80px;
 
-    &_bg_meat{
-        background: url('../img/content/meat_bg.jpg') 50% 50% no-repeat;
-        background-size: cover;
-    }
 
-    &_bg_veg{
-        background: url('../img/content/veg_bg.jpg') 50% 50% no-repeat;
-        background-size: cover;
-    }
 
-    &_bg_diet{
-        background: url('../img/content/diet_bg.jpg') 50% 50% no-repeat;
-        background-size: cover;
-    }
+
+}
+
+.menu-list__title-wrap{
+
 
     &:before{
         content: '';
         position: absolute;
         width: 80px;
-        background-color: rgba(#141414, .7);
         top:0;
         bottom:0;
         left:0;
         right:0;
     }
-}
 
+    &:after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        background-color: rgba(#000000, .7);
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+    }
+
+    &_bg_meat{
+        &:before {
+            background: url('../img/content/meat_bg.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &_bg_veg{
+        &:before {
+            background: url('../img/content/veg_bg.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &_bg_diet{
+        &:before {
+            background: url('../img/content/diet_bg.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+}
 
 .menu-list__title{
     font-family: "Gagalin";
@@ -82,5 +104,7 @@
     width: 0;
     height: 0;
     transition: all .5s;
+    font-weight: 300;
+    color: #ffffff;
     overflow: hidden;
 }

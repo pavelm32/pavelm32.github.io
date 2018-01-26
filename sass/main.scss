@@ -10,6 +10,7 @@
 // Layout
 
     @import 'layout/_fonts.scss';
+    @import "fontawesome/fa-regular.scss";
     @import 'layout/_base.scss';
     @import 'layout/_common.scss';
 
@@ -20,5 +21,6 @@
     @import 'section/_team.scss';
     @import 'section/_menu.scss';
     @import 'section/_reviews.scss';
+    @import 'section/_form.scss';
 
 
