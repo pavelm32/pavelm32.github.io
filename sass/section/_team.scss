@@ -2,7 +2,6 @@
     background: url('../../img/bg/team_bg.jpg') 50% 50% no-repeat;
     background-size: cover;
     position: relative;
-
 }
 
 .team__container{
@@ -12,23 +11,36 @@
     top:0;
     bottom: 0;
     margin: 0;
-    background-color: rgba(#2f3234, 0.93);
+    background-color: rgba($dark, 0.93);
     display: flex;
     align-items: center;
+
+    @include tablets {
+        width:100%;
+        text-align: center;
+    }
 }
 
 .team__section-title{
-    padding-top: 60px;
+    padding-top: rem(60px);
 }
 
 .team__content{
-    padding-top: 60px;
-    padding-left: 140px;
-    padding-right: 35px;
+    margin: rem(60px) rem(35px) 0 rem(140px);
+
+    @include tablets {
+        padding-left:0;
+        padding-right:0;
+    }
 }
 
 .team-list{
-    margin-top: 40px;
+    margin-top: rem(40px);
+
+    @include tablets {
+        width: 75%;
+        margin: rem(40px) auto 0;
+    }
 }
 
 .team-list__item{
@@ -37,7 +49,7 @@
     &:hover{
 
         .team-list__name{
-            color:#f9b43b;
+            color:$yellow;
             align-items: flex-start;
 
             &:before{
@@ -47,7 +59,7 @@
 
         .team-list__operator{
             height: auto;
-            margin-top: 15px;
+            margin-top: rem(15px);
         }
     }
 
@@ -58,7 +70,7 @@
 
 .team-list__item_opened{
     .team-list__name{
-        color:#f9b43b;
+        color: $yellow;
         align-items: flex-start;
 
         &:before{
@@ -68,14 +80,13 @@
 
     .team-list__operator{
         height: auto;
-        margin-top: 15px;
+        margin-top: rem(15px);
     }
 }
 
 .team-list__name{
-    font-family: 'Gagalin';
-    font-weight: 400;
-    color:#ffffff;
+    @include gagalin();
+    color: $white;
     display: flex;
     align-items: flex-end;
     transition: all .5s;
@@ -84,12 +95,17 @@
         content: '';
         width: 0;
         height: 0;
-        border: 6px solid transparent;
-        border-right-width: 4px;
-        border-left-width: 4px;
-        border-top-color: #f9b43b;
-        margin-right: 10px;
+        border: 8px solid transparent;
+        border-right-width: 5px;
+        border-left-width: 5px;
+        border-top-color: $yellow;
+        margin-right: rem(10px);
         transition: all .5s;
+    }
+
+    @include tablets{
+        justify-content: center;
+        font-size: rem(24px);
     }
 }
 
@@ -99,14 +115,22 @@
     display: flex;
     overflow: hidden;
 
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .team-list__operator-avatar{
-    width:102px;
-    height: 102px;
+    width: rem(102px);
+    height: rem(102px);
     overflow: hidden;
     border-radius: 50%;
-    margin-left: 15px;
+    margin-left: rem(15px);
+
+    @include tablets{
+        margin: 0 auto;
+    }
 }
 
 .team-list__operator-img{
@@ -116,11 +140,15 @@
 
 
 .team-list__operator-description{
-    color:#ffffff;
+    color: $white;
     flex:1;
-    margin-left: 15px;
+    margin-left: rem(15px);
     font-weight: 300;
     line-height: 1.9;
+
+    @include tablets{
+        margin: 0 auto;
+    }
 }
 
 .team-list__operator-description p{
@@ -129,4 +157,9 @@
 
 .team-list__operator-position{
     font-weight: 700;
+    margin: 0 auto rem(10px);
+
+    @include tablets{
+        margin-top: rem(10px);
+    }
 }

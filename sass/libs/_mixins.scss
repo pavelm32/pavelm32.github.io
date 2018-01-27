@@ -7,5 +7,41 @@
 
 //responsive
 @function rem($px) {
-    @return $px / 16px+0rem;
+    @return $px / 16px + 0rem;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin gagalin() {
+    font-family: "Gagalin", Helvetica, sans-serif;
+}
+
+@mixin ubuntu($style: light) {
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+
+    @if $style == light {
+        font-weight: 300;
+    }
+
+    @if $style == medium {
+        font-weight: 500;
+    }
+
+    @if $style == bold {
+        font-weight: 700;
+    }
+}
+
+@mixin lifehack() {
+    font-family: "Lifehack";
 }

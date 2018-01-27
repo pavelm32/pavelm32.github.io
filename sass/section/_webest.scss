@@ -10,53 +10,67 @@
 }
 
 .section__title_black {
-    color: #2f3234;
+    color: $dark;
 }
 
 .webest-list {
     display: flex;
     align-items: baseline;
-    margin-top:25px;
+    margin-top:rem(25px);
+
+    @include phones{
+        flex-wrap: wrap;
+    }
 }
 
 .webest-list__item {
-    margin-right: 40px;
-    flex:3;
+    margin-right: rem(40px);
+    flex-basis:30%;
     text-align: center;
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @include phones{
+        flex-basis:100%;
+        display: flex;
+        text-align: left;
     }
 }
 
 .webest-list__icon{
     width: 97px;
     height: 90px;
+
     &_view_meat{
 
-        fill: #e25028;
+        fill: $red;
     }
 
     &_view_hand{
 
-        fill: #f8b43a;
+        fill: $yellowliter;
     }
 
     &_view_natural{
 
-        fill: #8ac03e;
+        fill: $green;
+    }
+    @include phones{
+        margin-right: rem(20px);
     }
 }
 
 .webest-list__subtitle {
-    color: #000000;
-    font-family: 'Lifehack';
-    font-size: 24px;
-    margin-top: 30px;
+    color: $dark;
+    @include lifehack();
+    font-size: rem(24px);
+    margin-top: rem(30px);
 }
 
 .webest-list__text {
-    color: #2f3234;
+    color: $dark;
     opacity: 0.8;
     font-weight: 300;
     line-height: 1.8;

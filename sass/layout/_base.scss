@@ -1,10 +1,20 @@
+html {
+    @include tablets {
+        font-size: rem(15px);
+    }
+
+    @include phones {
+        font-size: rem(13px);
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    @include ubuntu();
     line-height: 1.42;
-    color: $dark;
+    color: $white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -22,6 +32,18 @@ ul {
 a{
     text-decoration: none;
 }
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
 
 /*.visuallyhidden {
     position: absolute;

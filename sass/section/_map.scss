@@ -34,23 +34,23 @@
     text-align: left;
     font-weight: 300;
     line-height: 1.5;
-    color: #ffffff;
+    color: $white;
 }
 
 .contacts__phone{
     display: flex;
     align-items: center;
-    color: #e45028;
+    color: $orange;
     font-weight: 700;
 
     &:before {
         content: ' ';
         background: url("../../img/icons/phone.svg") 50% no-repeat transparent;
         background-size: contain;
-        color: #e45028;
-        width: 12px;
-        height: 11px;
-        margin-right: 10px;
+        color: $orange;
+        width: rem(12px);
+        height: rem(11px);
+        margin-right: rem(10px);
     }
 }
 
@@ -61,7 +61,7 @@
 }
 
 .socials-list__item{
-    margin-right: 20px;
+    margin-right: rem(20px);
 
     &:hover{
         .socials-list__link{
@@ -80,8 +80,8 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: .3;
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
 
 
     &_view_vk{
