@@ -22,6 +22,14 @@
     width: 75%;
     display: flex;
     justify-content: flex-end;
+
+    @include tablets{
+        width: 100%;
+    }
+
+    @include phones{
+        width: 100%;
+    }
 }
 
 .menu-list__item{

@@ -5,6 +5,12 @@
     position: relative;
 }
 
+.form__section-title{
+    @include phones{
+        text-align: center;
+    }
+}
+
 .form__container{
     align-items: center;
     justify-content: center;
@@ -20,6 +26,11 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    @include phones{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .form__column{
@@ -34,6 +45,13 @@
         flex-basis: 70%;
         margin-right: 0;
     }
+
+    @include phones{
+        flex-basis: 100%;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .form__row{
@@ -41,21 +59,31 @@
     margin-bottom: rem(20px);
 }
 
+.form__row_type_radio{
+    @include phones{
+        display: inline-flex;
+        justify-content: center;
+    }
+}
+
 .form__fieldset {
     margin-right: rem(20px);
     width: 100%;
 }
 
+
+
 .form__fieldset-title, .form__fieldset-title-radio, .form__fieldset-title-checkbox{
     font-weight: 300;
     color: $white;
+    text-align: left;
 }
 
 .form__fieldset-input {
 
     border:1px solid #d1cfcb;
     border-radius: rem(4px);
-    line-height: rem(30px);
+    line-height: rem(33px);
     padding: 0 rem(20px);
     color: $dark;
     font-weight: 300;
@@ -64,6 +92,10 @@
 
     &:focus{
         border:1px solid $yellow;
+    }
+
+    @include phones{
+        line-height: rem(40px);
     }
 }
 
@@ -96,12 +128,13 @@
     align-items: center;
     position: relative;
     cursor: pointer;
+    white-space: nowrap;
 
     &:before{
         content: '';
         position: relative;
-        width: rem(15px);
-        height: rem(15px);
+        width: 15px;
+        height: 15px;
         background-color: $white;
         border: 0;
         border-radius: 50%;
@@ -112,12 +145,12 @@
         content: ' ';
         display: none;
         position: absolute;
-        width: rem(7px);
-        height: rem(7px);
+        width: 7px;
+        height: 7px;
         background-color: $red;
         border-radius: 50%;
-        top: rem(6px);
-        left: rem(4px);
+        top: 6px;
+        left: 4px;
     }
 
 }
@@ -143,8 +176,8 @@
     &:before{
         content: '';
         position: relative;
-        width: rem(15px);
-        height: rem(15px);
+        width: 15px;
+        height: 15px;
         background-color: $white;
         border: 0;
         margin-right: rem(10px);
@@ -157,10 +190,10 @@
         display: none;
         position: absolute;
         color: $red;
-        width: rem(11px);
-        height: rem(9px);
-        top: rem(4px);
-        left: rem(2px);
+        width: 11px;
+        height: 9px;
+        top: 4px;
+        left: 2px;
     }
 
 }

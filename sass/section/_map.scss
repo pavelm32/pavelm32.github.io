@@ -24,6 +24,10 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+
+    @include phones{
+        flex-direction: column;
+    }
 }
 
 .footer__column{
@@ -35,6 +39,10 @@
     font-weight: 300;
     line-height: 1.5;
     color: $white;
+
+    @include phones{
+        margin-bottom: 10px;
+    }
 }
 
 .contacts__phone{
@@ -51,6 +59,10 @@
         width: rem(12px);
         height: rem(11px);
         margin-right: rem(10px);
+    }
+
+    @include phones{
+        justify-content: center;
     }
 }
 
