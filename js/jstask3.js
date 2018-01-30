@@ -19,7 +19,7 @@ function loadPage(e) {
         }
     });
 
-    left.addEventListener("click", function () {
+    left.addEventListener("click", function (e) {
         e.preventDefault();
         // напишите здесь код, который сдвигает items на 100px влево
         // если item находится в самом начале, то больше элементы сдвигать влево не надо, т.к. вы достигли начала списка
