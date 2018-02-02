@@ -4,5 +4,3 @@
 node_modules/
 package*.json
 gulpfile.js
-js/jstask*.js
-jstask*.html
