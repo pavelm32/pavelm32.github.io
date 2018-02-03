@@ -37,6 +37,13 @@
             transform: rotate(90deg);
         }
 
+        @include tablets{
+            transform: translateX(-70%);
+        }
+
+        @include phones{
+            transform: translateX(-50%);
+        }
     }
 
     &_direction_right{
@@ -45,6 +52,14 @@
 
         &:before {
             transform: rotate(-90deg);
+        }
+
+        @include tablets{
+            transform: translateX(70%);
+        }
+
+        @include phones{
+            transform: translateX(50%);
         }
     }
 }
@@ -59,16 +74,163 @@
 .slider__item{
     display: flex;
     align-items: center;
+    position: relative;
+
+    @include tablets{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 }
 
 .slider__content-column{
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
+
+    @include tablets{
+        flex-basis: 70%;
+    }
+
+    @include phones{
+        flex-basis: 100%;
+    }
 }
 
-.slider__composition-list, .slider__composition{
+.slider__composition-icon-wrap{
+    position: absolute;
+    left: 0;
+    width: 95px;
+    height: 95px;
+    transform: translateY(-100%);
+    z-index: 3;
+
+    &:hover {
+
+        .slider__composition-icon_view_burger {
+            background-color: $red;
+        }
+
+        .slider__composition-list{
+            display: block;
+        }
+    }
+}
+
+.slider__composition-icon{
+    position: absolute;
+    width: 45px;
+    height: 85px;
+    padding: 5px 25px;
+    fill: white;
+    text-transform: uppercase;
+    @include gagalin();
+
+    &_view_burger{
+        top: 0;
+        left: 0;
+        background-color: #f08c33;
+        border-radius: 4px;
+
+        cursor:pointer;
+
+
+    }
+
+    &_view_kkal{
+        bottom: 0;
+        fill-opacity: .5;
+        transform: translateY(50%);
+
+        .slider__composition-icon-text{
+            font-size: 17px;
+        }
+
+        @include tablets{
+            top:0;
+            right: 0;
+            transform: translateY(-100%);
+        }
+    }
+}
+
+.slider__composition-list{
     display: none;
+    position:absolute;
+    top:0;
+    left: 95px;
+    background-color: rgba(255,255,255, .9);
+    color:$dark;
+    padding: 20px;
+    border-radius: 4px;
+
+    &:before{
+        display: none;
+    }
+
+    @include tablets{
+        &:before{
+            content: '';
+            background: url('../../img/content/close.png') center center no-repeat;
+            width: 18px;
+            height: 18px;
+            display: block;
+            right: 18px;
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+}
+
+.slider__composition-list-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.slider__composition-list-element{
+    margin-right: 25px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.slider__composition-list-icon{
+    width: 43px;
+    height: 39px;
+
+    &_view_beef, &_view_sauce{
+        fill: $red;
+    }
+
+    &_view_salad, &_view_cucumber{
+        fill: $green;
+    }
+
+    &_view_cheese, &_view_buns{
+        fill: $yellowliter;
+    }
+}
+
+.slider__composition-list-name{
+    font-weight: 500;
+}
+
+.slider__composition-list-weight{
+    font-weight: 300;
+    margin-left: auto;
+    white-space: nowrap;
+    text-align: right;
+    width: 100px;
+
+    @include tablets{
+        text-align: center;
+    }
 }
 
 .slider__image{
@@ -79,18 +241,29 @@
 .slider__section-title{
     color:$white;
     line-height: .9;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+    @include tablets{
+        text-align: center;
+    }
 }
 
 .slider__description{
     font-weight: 300;
     line-height: 1.8;
+
+    @include tablets{
+        text-align: center;
+    }
 }
 
 .slider__order{
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
     align-items: baseline;
+
+    @include tablets{
+        justify-content: center;
+    }
 }
 
 .slider__price{
