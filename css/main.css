@@ -201,6 +201,9 @@ h6 {
   width: 16px;
   height: 16px; }
 
+.popup {
+  display: none; }
+
 .wemake {
   background: url("../../img/bg/wemake_bg.jpg") 50% 50% no-repeat;
   background-size: cover;
@@ -485,6 +488,86 @@ h6 {
   @media screen and (max-width: 768px) {
     .team-list__operator-position {
       margin-top: 0.625rem; } }
+
+.slider {
+  background: #f9b43b;
+  background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%); }
+
+.slider__container {
+  position: relative;
+  align-items: center; }
+
+.slider__control-arrow {
+  display: flex; }
+
+.slider__slide-arrow {
+  height: 100%;
+  position: absolute;
+  width: 30px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center; }
+  .slider__slide-arrow:before {
+    content: ' ';
+    background: url("../../img/icons/arrow-scroll.svg") no-repeat;
+    width: 29px;
+    height: 14px;
+    transform-origin: center center; }
+  .slider__slide-arrow_direction_left {
+    left: 0;
+    transform: translateX(-100%); }
+    .slider__slide-arrow_direction_left:before {
+      transform: rotate(90deg); }
+  .slider__slide-arrow_direction_right {
+    right: 0;
+    transform: translateX(100%); }
+    .slider__slide-arrow_direction_right:before {
+      transform: rotate(-90deg); }
+
+.slider__list {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: calc(100% - 60px); }
+
+.slider__item {
+  display: flex;
+  align-items: center; }
+
+.slider__content-column {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column; }
+
+.slider__composition-list, .slider__composition {
+  display: none; }
+
+.slider__image {
+  width: 100%;
+  height: 100%; }
+
+.slider__section-title {
+  color: #ffffff;
+  line-height: .9;
+  margin-bottom: 50px; }
+
+.slider__description {
+  font-weight: 300;
+  line-height: 1.8; }
+
+.slider__order {
+  margin-top: 30px;
+  display: flex;
+  align-items: baseline; }
+
+.slider__price {
+  font-family: "Gagalin", Helvetica, sans-serif;
+  font-size: 30px;
+  color: #e35028;
+  margin-right: 30px; }
+  .slider__price .slider__price-value {
+    font-size: 72px; }
 
 .menu {
   background: url("../../img/bg/menu_bg.jpg") 50% 50% no-repeat;
