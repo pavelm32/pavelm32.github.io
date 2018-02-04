@@ -50,6 +50,20 @@
     @include tablets {
         display: flex;
     }
+
+    &.burger-link_change{
+        //position: fixed;
+        background: url('../../img/content/close-white.png');
+        width: 20px;
+        height: 20px;
+        //top:36px;
+        //right: 20px;
+        //z-index: 4;
+
+        .burger-link__item{
+            display: none;
+        }
+    }
 }
 
 .burger-link__item{
@@ -74,6 +88,17 @@
         bottom: 0;
     }
 }
+
+//.close-fixed-menu{
+//    display: none;
+//    position: fixed;
+//    background: url('../../img/content/close-white.png');
+//    width: 20px;
+//    height: 20px;
+//    top:36px;
+//    right: 20px;
+//    z-index: 4;
+//}
 
 .section__title {
     color: $yellow;
@@ -161,4 +186,15 @@
 
 .popup{
     display: none;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    top:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark;
+    z-index: 3;
 }

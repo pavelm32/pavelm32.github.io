@@ -6,7 +6,7 @@
 }
 
 .form__section-title{
-    @include phones{
+    @include tablets{
         text-align: center;
     }
 }
