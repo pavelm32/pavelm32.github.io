@@ -68,7 +68,7 @@
     display: flex;
     height:100%;
     align-items: center;
-    width: calc(100% - 60px);
+    width: calc(100% - #{rem(60px)});
 }
 
 .slider__item{
@@ -90,6 +90,8 @@
 
     @include tablets{
         flex-basis: 70%;
+        align-items: center;
+
     }
 
     @include phones{
@@ -100,8 +102,8 @@
 .slider__composition-icon-wrap{
     position: absolute;
     left: 0;
-    width: 95px;
-    height: 95px;
+    width: rem(95px);
+    height: rem(95px);
     transform: translateY(-100%);
     z-index: 3;
 
@@ -121,20 +123,21 @@
     position: absolute;
     width: 45px;
     height: 85px;
-    padding: 5px 25px;
+    padding: rem(5px) rem(25px);
     fill: white;
     text-transform: uppercase;
     @include gagalin();
+
+    @include phones{
+        padding: 0 rem(10px);
+    }
 
     &_view_burger{
         top: 0;
         left: 0;
         background-color: #f08c33;
         border-radius: 4px;
-
         cursor:pointer;
-
-
     }
 
     &_view_kkal{
@@ -158,11 +161,11 @@
     display: none;
     position:absolute;
     top:0;
-    left: 95px;
+    left: rem(95px);
     background-color: rgba(255,255,255, .9);
     color:$dark;
-    padding: 20px;
-    border-radius: 4px;
+    padding: rem(20px);
+    border-radius: rem(4px);
 
     &:before{
         display: none;
@@ -172,10 +175,10 @@
         &:before{
             content: '';
             background: url('../../img/content/close.png') center center no-repeat;
-            width: 18px;
-            height: 18px;
+            width: rem(18px);
+            height: rem(18px);
             display: block;
-            right: 18px;
+            right: rem(18px);
             position: absolute;
             cursor: pointer;
         }
@@ -185,7 +188,7 @@
 .slider__composition-list-item{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 
     &:last-child{
         margin-bottom: 0;
@@ -193,7 +196,7 @@
 }
 
 .slider__composition-list-element{
-    margin-right: 25px;
+    margin-right: rem(25px);
 
     &:last-child{
         margin-right: 0;
@@ -201,8 +204,8 @@
 }
 
 .slider__composition-list-icon{
-    width: 43px;
-    height: 39px;
+    width: rem(43px);
+    height: rem(39px);
 
     &_view_beef, &_view_sauce{
         fill: $red;
@@ -226,7 +229,7 @@
     margin-left: auto;
     white-space: nowrap;
     text-align: right;
-    width: 100px;
+    width: rem(100px);
 
     @include tablets{
         text-align: center;
@@ -236,12 +239,20 @@
 .slider__image{
     width: 100%;
     height: 100%;
+
+    @include tablets {
+        width: 80%;
+    }
+
+    @include phones{
+        width: 60%;
+    }
 }
 
 .slider__section-title{
     color:$white;
     line-height: .9;
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
     @include tablets{
         text-align: center;
     }
@@ -257,7 +268,7 @@
 }
 
 .slider__order{
-    margin-top: 15px;
+    margin-top: rem(15px);
     display: flex;
     align-items: baseline;
 
@@ -268,11 +279,11 @@
 
 .slider__price{
     @include gagalin();
-    font-size:30px;
+    font-size:rem(30px);
     color:$red;
-    margin-right: 30px;
+    margin-right: rem(30px);
 
     .slider__price-value{
-        font-size:72px;
+        font-size:rem(72px);
     }
 }
