@@ -1,0 +1,54 @@
+
+.popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 4;
+
+    &_show{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.popup__container{
+    position: relative;
+    max-width: 460px;
+    padding: 30px 20px 20px;
+    background-color: $white;
+    color: $dark;
+    border-radius: 4px;
+    margin: 0 20px;
+    font-weight: 300;
+}
+
+.review-popup__close{
+    position: absolute;
+    background: url('../../img/content/close.png') center center no-repeat;
+    width: 18px;
+    height: 18px;
+    top: 20px;
+    right: 20px;
+
+}
+
+.review-popup__title{
+    @include gagalin();
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.status-popup__close{
+    margin-top: 10px;
+}
+
+.status-popup__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

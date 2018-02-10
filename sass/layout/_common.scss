@@ -38,6 +38,10 @@
     &:hover {
         background-color: darken($orange, 7%);
     }
+
+    &.order-link_hidden{
+        display: none;
+    }
 }
 
 .burger-link{
@@ -182,10 +186,6 @@
         }
     }
 
-}
-
-.popup{
-    display: none;
 }
 
 .overlay{

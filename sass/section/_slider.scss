@@ -75,10 +75,12 @@
     display: flex;
     align-items: center;
     position: relative;
+    padding-top: 100px;
 
     @include tablets{
         flex-wrap: wrap;
         justify-content: center;
+
     }
 
 }
@@ -119,6 +121,22 @@
     }
 }
 
+.slider__kkal-icon-wrap{
+    position: absolute;
+    width: rem(95px);
+    height: rem(95px);
+    bottom: 0;
+
+    z-index: 3;
+
+    @include tablets{
+
+        right: 0;
+        transform: translateY(-100%);
+        bottom: initial;
+    }
+}
+
 .slider__composition-icon{
     position: absolute;
     width: 45px;
@@ -143,7 +161,7 @@
     &_view_kkal{
         bottom: 0;
         fill-opacity: .5;
-        transform: translateY(50%);
+       // transform: translateY(50%);
 
         .slider__composition-icon-text{
             font-size: 17px;
@@ -152,7 +170,7 @@
         @include tablets{
             top:0;
             right: 0;
-            transform: translateY(-100%);
+           // transform: translateY(-100%);
         }
     }
 }
@@ -175,8 +193,8 @@
         &:before{
             content: '';
             background: url('../../img/content/close.png') center center no-repeat;
-            width: rem(18px);
-            height: rem(18px);
+            width: 18px;
+            height: 18px;
             display: block;
             right: rem(18px);
             position: absolute;
@@ -255,6 +273,7 @@
     margin-bottom: rem(35px);
     @include tablets{
         text-align: center;
+        font-size: rem(46px);
     }
 }
 

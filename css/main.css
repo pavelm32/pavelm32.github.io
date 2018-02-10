@@ -114,6 +114,8 @@ h6 {
   transition: .5s; }
   .order-link:hover {
     background-color: #ce401a; }
+  .order-link.order-link_hidden {
+    display: none; }
 
 .burger-link {
   height: 1.375rem;
@@ -208,9 +210,6 @@ h6 {
   width: 16px;
   height: 16px; }
 
-.popup {
-  display: none; }
-
 .overlay {
   display: none;
   position: fixed;
@@ -220,6 +219,50 @@ h6 {
   height: 100%;
   background-color: #2f3234;
   z-index: 3; }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4; }
+  .popup_show {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.popup__container {
+  position: relative;
+  max-width: 460px;
+  padding: 30px 20px 20px;
+  background-color: #ffffff;
+  color: #2f3234;
+  border-radius: 4px;
+  margin: 0 20px;
+  font-weight: 300; }
+
+.review-popup__close {
+  position: absolute;
+  background: url("../../img/content/close.png") center center no-repeat;
+  width: 18px;
+  height: 18px;
+  top: 20px;
+  right: 20px; }
+
+.review-popup__title {
+  font-family: "Gagalin", Helvetica, sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px; }
+
+.status-popup__close {
+  margin-top: 10px; }
+
+.status-popup__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .wemake {
   background: url("../../img/bg/wemake_bg.jpg") 50% 50% no-repeat;
@@ -609,7 +652,8 @@ h6 {
 .slider__item {
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+  padding-top: 100px; }
   @media screen and (max-width: 768px) {
     .slider__item {
       flex-wrap: wrap;
@@ -639,6 +683,18 @@ h6 {
   .slider__composition-icon-wrap:hover .slider__composition-list {
     display: block; }
 
+.slider__kkal-icon-wrap {
+  position: absolute;
+  width: 5.9375rem;
+  height: 5.9375rem;
+  bottom: 0;
+  z-index: 3; }
+  @media screen and (max-width: 768px) {
+    .slider__kkal-icon-wrap {
+      right: 0;
+      transform: translateY(-100%);
+      bottom: initial; } }
+
 .slider__composition-icon {
   position: absolute;
   width: 45px;
@@ -658,15 +714,13 @@ h6 {
     cursor: pointer; }
   .slider__composition-icon_view_kkal {
     bottom: 0;
-    fill-opacity: .5;
-    transform: translateY(50%); }
+    fill-opacity: .5; }
     .slider__composition-icon_view_kkal .slider__composition-icon-text {
       font-size: 17px; }
     @media screen and (max-width: 768px) {
       .slider__composition-icon_view_kkal {
         top: 0;
-        right: 0;
-        transform: translateY(-100%); } }
+        right: 0; } }
 
 .slider__composition-list {
   display: none;
@@ -683,8 +737,8 @@ h6 {
     .slider__composition-list:before {
       content: '';
       background: url("../../img/content/close.png") center center no-repeat;
-      width: 1.125rem;
-      height: 1.125rem;
+      width: 18px;
+      height: 18px;
       display: block;
       right: 1.125rem;
       position: absolute;
@@ -741,7 +795,8 @@ h6 {
   margin-bottom: 2.1875rem; }
   @media screen and (max-width: 768px) {
     .slider__section-title {
-      text-align: center; } }
+      text-align: center;
+      font-size: 2.875rem; } }
 
 .slider__description {
   font-weight: 300;
