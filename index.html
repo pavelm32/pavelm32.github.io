@@ -7,6 +7,7 @@
         <meta content="ie=edge" http-equiv="x-ua-compatible">
         <link rel="stylesheet" href="css/normalize.css"/>
         <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="css/onepage-scroll.css"/>
         <link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
@@ -20,12 +21,12 @@
                         <div class="header__menu">
                             <nav class="nav">
                                 <ul class="nav-list">
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link">о нас</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link">бургеры</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link">команда</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link">меню</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link">отзывы</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link">контакты</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="2">о нас</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="3">бургеры</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="4">команда</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="5">меню</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="6">отзывы</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="8">контакты</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -625,25 +626,32 @@
                     </div>
                 </footer>
             </section>
+            <div class="overlay"></div>
         </div>
         <nav class="nav-section-dot">
             <ul class="point-list">
-                <li class="point-list__item point-list__item_active">
+                <li class="point-list__item point-list__item_active" data-index="1">
                     <div class="point-list__dot"></div>
                 </li>
-                <li class="point-list__item">
+                <li class="point-list__item" data-index="2">
                     <div class="point-list__dot"></div>
                 </li>
-                <li class="point-list__item">
+                <li class="point-list__item" data-index="3">
                     <div class="point-list__dot"></div>
                 </li>
-                <li class="point-list__item">
+                <li class="point-list__item" data-index="4">
                     <div class="point-list__dot"></div>
                 </li>
-                <li class="point-list__item">
+                <li class="point-list__item" data-index="5">
                     <div class="point-list__dot"></div>
                 </li>
-                <li class="point-list__item">
+                <li class="point-list__item" data-index="6">
+                    <div class="point-list__dot"></div>
+                </li>
+                <li class="point-list__item" data-index="7">
+                    <div class="point-list__dot"></div>
+                </li>
+                <li class="point-list__item" data-index="8">
                     <div class="point-list__dot"></div>
                 </li>
             </ul>
@@ -678,9 +686,10 @@
                 </div>
             </div>
         </div>
-        <div class="overlay"></div>
+
         <script type="text/javascript" src="./js/jquery.min.js"></script>
         <script type="text/javascript" src="./js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="./js/jquery.onepage-scroll.js"></script>
         <script type="text/javascript" src="./js/main.js"></script>
     </body>
 </html>

@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     min-height: 100%;
-    overflow: hidden;
+    //overflow: hidden;
 }
 
 .container {
@@ -108,6 +108,12 @@
     color: $yellow;
     @include gagalin();
     font-size: rem(72px);
+}
+
+.nav-section-dot{
+    &_hidden{
+        display: none;
+    }
 }
 
 .point-list{

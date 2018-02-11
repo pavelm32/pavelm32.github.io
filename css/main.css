@@ -84,8 +84,7 @@ h6 {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
-  overflow: hidden; }
+  min-height: 100%; }
 
 .container {
   width: 95%;
@@ -151,6 +150,9 @@ h6 {
   color: #f9b43b;
   font-family: "Gagalin", Helvetica, sans-serif;
   font-size: 4.5rem; }
+
+.nav-section-dot_hidden {
+  display: none; }
 
 .point-list {
   position: fixed;
