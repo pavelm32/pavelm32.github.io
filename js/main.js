@@ -28,6 +28,15 @@ function toogleOverlay() {
     }
 }
 
+function tooglePopupOverlay() {
+    var overlay = document.querySelector('.popup-overlay');
+    if (getComputedStyle(overlay).display == 'none' || getComputedStyle(overlay).display == '') {
+        overlay.style.display = 'block';
+    } else {
+        overlay.style.display = 'none';
+    }
+}
+
 function toggleElementClass($this) {
     $this.classList.toggle('burger-link_change');
     document.querySelector('.order-link').classList.toggle('order-link_hidden');
@@ -55,7 +64,7 @@ for (i = 0; i < team_acrd.length; i++) {
 for (i = 0; i < review_btn.length; i++) {
     review_btn[i].addEventListener('click', function (e) {
         e.preventDefault();
-        toogleOverlay();
+        tooglePopupOverlay();
 
         document.querySelector('.review-popup').classList.add('popup_show');
     });
@@ -64,7 +73,7 @@ for (i = 0; i < review_btn.length; i++) {
 for (i = 0; i < popup_close.length; i++) {
     popup_close[i].addEventListener('click', function (e) {
         e.preventDefault();
-        toogleOverlay();
+        tooglePopupOverlay();
 
         document.querySelector('.popup_show').classList.remove('popup_show');
     });
