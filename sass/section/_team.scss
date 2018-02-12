@@ -78,6 +78,8 @@
 }
 
 .team-list__item_opened{
+
+
     .team-list__name{
         color: $yellow;
         align-items: flex-start;
@@ -88,8 +90,11 @@
     }
 
     .team-list__operator{
-        height: auto;
+        //height: 100%;
+        //display: flex;
         margin-top: rem(15px);
+        animation: showText 1s;
+        animation-fill-mode: forwards;
     }
 }
 
@@ -120,12 +125,14 @@
 
 .team-list__operator{
     height: 0;
-    transition: all .5s;
+    //display: none;
+   // transition: all .5s;
     display: flex;
+    opacity: 0;
     overflow: hidden;
 
     @include tablets{
-        display: flex;
+       // display: flex;
         flex-direction: column;
     }
 }

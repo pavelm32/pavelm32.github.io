@@ -266,6 +266,21 @@ h6 {
   flex-direction: column;
   align-items: center; }
 
+@keyframes showMenu {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+    opacity: 0; }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+@keyframes showText {
+  from {
+    height: 0;
+    opacity: 0; }
+  to {
+    height: 100%;
+    opacity: 1; } }
 .wemake {
   background: url("../../img/bg/wemake_bg.jpg") 50% 50% no-repeat;
   background-size: cover;
@@ -302,11 +317,14 @@ h6 {
   .fixed-menu .nav-list__item {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    opacity: 0;
+    animation: showMenu .3s;
+    animation-fill-mode: forwards; }
     .fixed-menu .nav-list__item:after {
       margin: 1.25rem 0.75rem; }
   .fixed-menu .nav-list__link {
-    font-size: 24px; }
+    font-size: 18px; }
 
 .nav-list__item {
   display: inline-block;
@@ -529,8 +547,9 @@ h6 {
   .team-list__item_opened .team-list__name:before {
     transform: rotate(-180deg); }
 .team-list__item_opened .team-list__operator {
-  height: auto;
-  margin-top: 0.9375rem; }
+  margin-top: 0.9375rem;
+  animation: showText 1s;
+  animation-fill-mode: forwards; }
 
 .team-list__name {
   font-family: "Gagalin", Helvetica, sans-serif;
@@ -555,12 +574,11 @@ h6 {
 
 .team-list__operator {
   height: 0;
-  transition: all .5s;
   display: flex;
+  opacity: 0;
   overflow: hidden; }
   @media screen and (max-width: 768px) {
     .team-list__operator {
-      display: flex;
       flex-direction: column; } }
 
 .team-list__operator-avatar {
@@ -853,11 +871,18 @@ h6 {
 
 .menu-list__item {
   height: 100%;
-  display: flex; }
-  .menu-list__item_opened .menu-list__title {
-    color: #f9b43b; }
-  .menu-list__item_opened .menu-list__content {
-    width: 100%; }
+  display: flex;
+  justify-content: flex-end;
+  width: 80px;
+  transition: all .5s; }
+  .menu-list__item_opened {
+    width: 100%;
+    transition-delay: 0.1s; }
+    .menu-list__item_opened .menu-list__title {
+      color: #f9b43b; }
+    .menu-list__item_opened .menu-list__content {
+      width: 100%;
+      transition: all .5s; }
 
 .menu-list__title-wrap {
   height: 100%;
@@ -911,7 +936,9 @@ h6 {
   background: rgba(47, 50, 52, 0.93);
   width: 0;
   /*transition: all 1s;*/
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all .5s;
+  transition-delay: 0.2s; }
 
 .menu-list__description {
   width: calc(100% - 3.75rem);

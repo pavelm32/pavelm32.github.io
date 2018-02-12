@@ -57,7 +57,12 @@ for (i = 0; i < team_acrd.length; i++) {
     team_acrd[i].addEventListener('click', function (e) {
         e.preventDefault();
 
+
+
         checkActiveAccordionItem(this, 'team');
+
+       // var tmp_h = parseFloat(getComputedStyle(this).height);
+       // this.style.height = tmp_h + 'px';
     });
 }
 

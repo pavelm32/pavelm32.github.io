@@ -35,14 +35,21 @@
 .menu-list__item{
     height: 100%;
     display: flex;
+    justify-content: flex-end;
+    width: 80px;
+    transition: all .5s;
+
 
     &_opened{
+        width: 100%;
+        transition-delay: 0.1s;
         .menu-list__title{
             color:#f9b43b;
         }
 
         .menu-list__content{
             width: 100%;
+            transition: all .5s;
         }
     }
 }
@@ -119,6 +126,8 @@
     width: 0;
     /*transition: all 1s;*/
     overflow: hidden;
+    transition: all .5s;
+    transition-delay: 0.2s;
 }
 
 .menu-list__description{

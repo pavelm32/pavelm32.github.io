@@ -1,0 +1,26 @@
+@keyframes showMenu {
+    from {
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes showText {
+    from {
+        //display: none;
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        //display: flex;
+        height: 100%;
+       opacity: 1;
+    }
+}
