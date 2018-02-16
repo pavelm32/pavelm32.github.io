@@ -161,6 +161,9 @@ h6 {
   color: #f9b43b;
   font-family: "Gagalin", Helvetica, sans-serif;
   font-size: 4.5rem; }
+  @media screen and (max-width: 768px) {
+    .section__title {
+      font-size: 3.125rem; } }
 
 .nav-section-dot_hidden {
   display: none; }
