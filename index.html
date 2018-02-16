@@ -7,12 +7,13 @@
         <meta content="ie=edge" http-equiv="x-ua-compatible">
         <link rel="stylesheet" href="css/normalize.css"/>
         <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-        <link rel="stylesheet" href="css/onepage-scroll.css"/>
+        <!--link rel="stylesheet" href="css/onepage-scroll.css"/-->
         <link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
         <div class="wrapper">
-            <section class="section wemake">
+            <main class="maincontent">
+            <section class="section wemake section_active">
                 <div class="container wemake__container">
                     <header class="header">
                         <a href="#" class="logo header__logo">
@@ -21,12 +22,12 @@
                         <div class="header__menu">
                             <nav class="nav">
                                 <ul class="nav-list">
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="2">о нас</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="3">бургеры</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="4">команда</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="5">меню</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="6">отзывы</a></li>
-                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="8">контакты</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="1">о нас</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="2">бургеры</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="3">команда</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="4">меню</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="5">отзывы</a></li>
+                                    <li class="nav-list__item"><a href="#" class="nav-list__link" data-index="7">контакты</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -608,7 +609,7 @@
                 </div>
             </section>
             <section class="section map">
-                <div class="map__container"></div>
+                <div class="map__container" id="map"></div>
                 <footer class="footer">
                     <div class="container footer__container">
                         <div class="footer__column contacts">
@@ -626,11 +627,16 @@
                     </div>
                 </footer>
             </section>
-            <div class="overlay"></div>
+                <div class="overlay"></div>
+            </main>
+
         </div>
         <nav class="nav-section-dot">
             <ul class="point-list">
-                <li class="point-list__item point-list__item_active" data-index="1">
+                <li class="point-list__item point-list__item_active" data-index="0">
+                    <div class="point-list__dot"></div>
+                </li>
+                <li class="point-list__item" data-index="1">
                     <div class="point-list__dot"></div>
                 </li>
                 <li class="point-list__item" data-index="2">
@@ -649,9 +655,6 @@
                     <div class="point-list__dot"></div>
                 </li>
                 <li class="point-list__item" data-index="7">
-                    <div class="point-list__dot"></div>
-                </li>
-                <li class="point-list__item" data-index="8">
                     <div class="point-list__dot"></div>
                 </li>
             </ul>
@@ -686,10 +689,13 @@
                 </div>
             </div>
         </div>
+
         <div class="popup-overlay"></div>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
         <script type="text/javascript" src="./js/owl.carousel.min.js"></script>
-        <script type="text/javascript" src="./js/jquery.onepage-scroll.js"></script>
+        <script type="text/javascript" src="./js/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="./js/mobile-detect.min.js"></script>
+        <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script type="text/javascript" src="./js/main.js"></script>
     </body>
 </html>
