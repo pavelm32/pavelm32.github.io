@@ -204,13 +204,13 @@ $(function () {
         touchmove: e => e.preventDefault()
     });
 
-    // if (isMobile) {
-    //     $(document).swipe({
-    //         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-    //             prepareToScroll(direction === 'down' ? 'up' : 'down');
-    //         }
-    //     });
-    // }
+    if (isMobile) {
+        $(document).swipe({
+            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+                prepareToScroll(direction === 'down' ? 'up' : 'down');
+            }
+        });
+    }
 
 
 
