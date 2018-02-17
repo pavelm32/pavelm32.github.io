@@ -11,7 +11,6 @@ burger_link.addEventListener('click', function (e) {
     toggleElementClass(this);
 });
 
-
 function toogleOverlay() {
     let overlay = document.querySelector('.overlay');
     if (getComputedStyle(overlay).display == 'none' || getComputedStyle(overlay).display == '') {
@@ -46,7 +45,7 @@ for (let i = 0; i < menu_acrd.length; i++) {
     });
 }
 
-for (i = 0; i < team_acrd.length; i++) {
+for (let i = 0; i < team_acrd.length; i++) {
     team_acrd[i].addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -59,7 +58,7 @@ for (i = 0; i < team_acrd.length; i++) {
     });
 }
 
-for (i = 0; i < review_btn.length; i++) {
+for (let i = 0; i < review_btn.length; i++) {
     review_btn[i].addEventListener('click', function (e) {
         e.preventDefault();
         tooglePopupOverlay();
@@ -68,7 +67,7 @@ for (i = 0; i < review_btn.length; i++) {
     });
 }
 
-for (i = 0; i < popup_close.length; i++) {
+for (let i = 0; i < popup_close.length; i++) {
     popup_close[i].addEventListener('click', function (e) {
         e.preventDefault();
         tooglePopupOverlay();
