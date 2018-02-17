@@ -183,7 +183,7 @@ let sendForm = function (e) {
         showStatusPopup(message);
 
     }).fail((jqXHR, textStatus) => {
-        showStatusPopup("Request failed: " + textStatus);
+        showStatusPopup("Неудачный запрос: " + textStatus);
     });
 };
 
