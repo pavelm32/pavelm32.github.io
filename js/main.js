@@ -13,7 +13,7 @@ burger_link.addEventListener('click', function (e) {
 
 
 function toogleOverlay() {
-    var overlay = document.querySelector('.overlay');
+    let overlay = document.querySelector('.overlay');
     if (getComputedStyle(overlay).display == 'none' || getComputedStyle(overlay).display == '') {
         overlay.style.display = 'block';
     } else {
@@ -22,7 +22,7 @@ function toogleOverlay() {
 }
 
 function tooglePopupOverlay() {
-    var overlay = document.querySelector('.popup-overlay');
+    let overlay = document.querySelector('.popup-overlay');
     if (getComputedStyle(overlay).display == 'none' || getComputedStyle(overlay).display == '') {
         overlay.style.display = 'block';
     } else {
@@ -38,7 +38,7 @@ function toggleElementClass($this) {
     document.querySelector('.nav-section-dot').classList.toggle('nav-section-dot_hidden');
 }
 
-for (var i = 0; i < menu_acrd.length; i++) {
+for (let i = 0; i < menu_acrd.length; i++) {
     menu_acrd[i].addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -83,7 +83,7 @@ function checkActiveAccordionItem($this, type) {
         return;
     }
 
-    var elm = document.querySelector('.' + type + '-list__item_opened');
+    let elm = document.querySelector('.' + type + '-list__item_opened');
 
     if (typeof elm != 'undefined' && elm) {
         elm.classList.remove(type + '-list__item_opened');
@@ -153,6 +153,60 @@ let prepareToScroll = direction => {
     }
 };
 
+let sendForm = function (e) {
+    e.preventDefault();
+
+    let form = $(this),
+        hasError = false,
+        inputs = $('input[type=text]', form);
+
+    $.each(inputs, (inx, elem) => {
+        if ($(elem).val() == '') {
+            $(elem).addClass('form__fieldset-input_error')
+            hasError = true;
+        }
+    });
+
+    if (hasError) {
+        showStatusPopup("Незаполнены обязательные поля");
+        return;
+    }
+
+    sendRequest(form).done(data => {
+        let message = data.message,
+            status = data.status;
+
+        if (status) {
+            showStatusPopup(message);
+        } else{
+            showStatusPopup(message);
+        }
+    }).fail((jqXHR, textStatus) => {
+        showStatusPopup("Request failed: " + textStatus);
+    });
+};
+
+let sendRequest = form => {
+    let data = form.serialize(),
+        methos = form.attr('method'),
+        url = form.attr('action');
+
+    return $.ajax({
+        type: methos,
+        url: url,
+        dataType : 'JSON',
+        data: data
+    })
+};
+
+let showStatusPopup = message => {
+    let status_popup = $('.status-popup').addClass('popup_show'),
+        container = $('.status-popup__message', status_popup);
+
+    container.html(message);
+    tooglePopupOverlay();
+};
+
 $(function () {
     $('.owl-carousel').owlCarousel({
         loop:true,
@@ -212,7 +266,15 @@ $(function () {
         });
     }
 
+    $('#order-form').on('submit', sendForm);
 
+    $('input[type=text]').on('focus', function () {
+        let $this = $(this)
+
+        if ($this.hasClass('form__fieldset-input_error')) {
+            $this.removeClass('form__fieldset-input_error');
+        }
+    });
 
 });
 

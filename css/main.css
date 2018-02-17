@@ -1140,6 +1140,8 @@ h6 {
   outline: none; }
   .form__fieldset-input:focus {
     border: 1px solid #f9b43b; }
+  .form__fieldset-input_error {
+    border: 2px solid #e35028; }
   @media screen and (max-width: 480px) {
     .form__fieldset-input {
       line-height: 2.5rem; } }
