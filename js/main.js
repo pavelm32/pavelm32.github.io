@@ -177,10 +177,11 @@ let sendForm = function (e) {
             status = data.status;
 
         if (status) {
-            showStatusPopup(message);
-        } else{
-            showStatusPopup(message);
+            form[0].reset();
         }
+
+        showStatusPopup(message);
+
     }).fail((jqXHR, textStatus) => {
         showStatusPopup("Request failed: " + textStatus);
     });

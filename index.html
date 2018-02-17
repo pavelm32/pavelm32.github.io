@@ -543,35 +543,35 @@
                             <div class="form__row">
                                 <label class="form__fieldset">
                                     <div class="form__fieldset-title">Имя</div>
-                                    <input type="text" class="form__fieldset-input">
+                                    <input type="text" class="form__fieldset-input" name="uname">
                                 </label>
                                 <label class="form__fieldset">
                                     <div class="form__fieldset-title">Телефон</div>
-                                    <input type="text" class="form__fieldset-input" placeholder="89212264923">
+                                    <input type="text" class="form__fieldset-input" placeholder="89212264923" name="uphone">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__fieldset">
                                     <div class="form__fieldset-title">Улица</div>
-                                    <input type="text" class="form__fieldset-input">
+                                    <input type="text" class="form__fieldset-input" name="street">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__fieldset">
                                     <div class="form__fieldset-title">Дом</div>
-                                    <input type="text" class="form__fieldset-input">
+                                    <input type="text" class="form__fieldset-input" name="house">
                                 </label>
                                 <label class="form__fieldset">
                                     <div class="form__fieldset-title">Корпус</div>
-                                    <input type="text" class="form__fieldset-input">
+                                    <input type="text" class="form__fieldset-input" name="korpus">
                                 </label>
                                 <label class="form__fieldset">
                                     <div class="form__fieldset-title">Квартира</div>
-                                    <input type="text" class="form__fieldset-input">
+                                    <input type="text" class="form__fieldset-input" name="apartment">
                                 </label>
                                 <label class="form__fieldset">
                                     <div class="form__fieldset-title">Этаж</div>
-                                    <input type="text" class="form__fieldset-input">
+                                    <input type="text" class="form__fieldset-input" name="floor">
                                 </label>
                             </div>
                         </div>
@@ -579,22 +579,22 @@
                             <div class="form__row">
                                 <label class="form__fieldset">
                                     <div class="form__fieldset-title">Комментарий</div>
-                                    <textarea class="form__fieldset-textarea"></textarea>
+                                    <textarea class="form__fieldset-textarea" name="comment"></textarea>
                                 </label>
                             </div>
                             <div class="form__row form__row_type_radio">
                                 <label for="cash"  class="form__fieldset">
-                                    <input type="radio" name="type_pay" id="cash" class="form__fieldset-radio" checked="">
+                                    <input type="radio" name="type_pay" id="cash" class="form__fieldset-radio" value="1" checked="">
                                     <div class="form__fieldset-title-radio">Потребуется сдача</div>
                                 </label>
                                 <label for="cards"  class="form__fieldset">
-                                    <input type="radio" name="type_pay" id="cards" class="form__fieldset-radio" checked="">
+                                    <input type="radio" name="type_pay" id="cards" class="form__fieldset-radio" value="2" checked="checked">
                                     <div class="form__fieldset-title-radio">Оплата по карте</div>
                                 </label>
                             </div>
                             <div class="form__row form__row_type_radio">
                                 <label for="recall"  class="form__fieldset">
-                                    <input type="checkbox" name="type_pay" id="recall" class="form__fieldset-checkbox" checked="checked">
+                                    <input type="checkbox" name="is_call" id="recall" class="form__fieldset-checkbox" checked="checked">
                                     <div class="form__fieldset-title-checkbox">Не перезванивать</div>
                                 </label>
                             </div>
