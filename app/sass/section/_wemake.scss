@@ -1,5 +1,5 @@
 .wemake {
-    background: url('../../img/bg/wemake_bg.jpg') 50% 50% no-repeat;
+    background: url('../img/bg/wemake_bg.jpg') 50% 50% no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -151,7 +151,7 @@
 }
 
 .scroll-arrow{
-    background: url('../../img/icons/arrow-scroll.svg') no-repeat;
+    background: url('../img/icons/arrow-scroll.svg') no-repeat;
     cursor: pointer;
     margin-bottom: rem(40px);
     width: 29px;

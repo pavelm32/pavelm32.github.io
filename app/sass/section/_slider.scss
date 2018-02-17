@@ -23,7 +23,7 @@
 
     &:before {
         content: ' ';
-        background: url('../../img/icons/arrow-scroll.svg') no-repeat;
+        background: url('../img/icons/arrow-scroll.svg') no-repeat;
         width: 29px;
         height: 14px;
         transform-origin: center center;
@@ -192,7 +192,7 @@
     @include tablets{
         &:before{
             content: '';
-            background: url('../../img/content/close.png') center center no-repeat;
+            background: url('../img/content/close.png') center center no-repeat;
             width: 18px;
             height: 18px;
             display: block;

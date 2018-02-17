@@ -1,6 +1,6 @@
 
 .form {
-    background: url('../../img/bg/form_bg.jpg') 50% 50% no-repeat;
+    background: url('../img/bg/form_bg.jpg') 50% 50% no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -192,7 +192,7 @@
 
     &:after{
         content: ' ';
-        background: url("../../img/icons/check.svg") 50% no-repeat transparent;
+        background: url("../img/icons/check.svg") 50% no-repeat transparent;
         background-size: contain;
         display: none;
         position: absolute;

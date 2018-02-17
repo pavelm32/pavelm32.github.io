@@ -1,5 +1,5 @@
 .menu {
-    background: url('../../img/bg/menu_bg.jpg') 50% 50% no-repeat;
+    background: url('../img/bg/menu_bg.jpg') 50% 50% no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -82,21 +82,21 @@
 
     &_bg_meat{
         &:before {
-            background: url('../../img/content/meat_bg.jpg') 50% 50% no-repeat;
+            background: url('../img/content/meat_bg.jpg') 50% 50% no-repeat;
             background-size: cover;
         }
     }
 
     &_bg_veg{
         &:before {
-            background: url('../../img/content/veg_bg.jpg') 50% 50% no-repeat;
+            background: url('../img/content/veg_bg.jpg') 50% 50% no-repeat;
             background-size: cover;
         }
     }
 
     &_bg_diet{
         &:before {
-            background: url('../../img/content/diet_bg.jpg') 50% 50% no-repeat;
+            background: url('../img/content/diet_bg.jpg') 50% 50% no-repeat;
             background-size: cover;
         }
     }
